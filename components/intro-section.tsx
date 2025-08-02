@@ -115,27 +115,7 @@ export default function IntroSection() {
 
       {/* Video Controls */}
       <div className="absolute bottom-8 left-8 right-8 z-10">
-        <div className="flex items-center justify-between text-white mb-4">
-          <div className="flex items-center space-x-4">
-            <Button variant="ghost" size="icon" onClick={togglePlay} className="text-white hover:bg-white/20">
-              {isPlaying ? <Pause className="h-6 w-6" /> : <Play className="h-6 w-6" />}
-            </Button>
-            <Button variant="ghost" size="icon" onClick={toggleMute} className="text-white hover:bg-white/20">
-              {isMuted ? <VolumeX className="h-6 w-6" /> : <Volume2 className="h-6 w-6" />}
-            </Button>
-            <span className="text-sm">
-              {formatTime(videoRef.current?.currentTime || 0)} / {formatTime(duration)}
-            </span>
-          </div>
-          <Button
-            variant="ghost"
-            onClick={skipIntro}
-            className="text-white hover:bg-white/20 flex items-center space-x-2"
-          >
-            <span>Skip Intro</span>
-            <SkipForward className="h-4 w-4" />
-          </Button>
-        </div>
+        
         <Progress value={progress} className="h-1 bg-white/20" />
       </div>
     </div>
